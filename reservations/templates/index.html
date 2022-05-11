@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Reservations</title>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+              <th>Rental Name</th>
+              <th>Reservation ID</th>
+              <th>Check In</th>
+              <th>Check Out</th>
+              <th>Previous Reservation</th>
+            </tr>
+            {% for reservation in reservations %}
+              <tr>
+                  <td>{{reservation.rental_name}}</td>
+                  <td>{{reservation.reservation_id}}</td>
+                  <td>{{reservation.check_in}}</td>
+                  <td>{{reservation.check_out}}</td>
+                  <td>{{reservation.previous_reservation}}</td>
+              </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

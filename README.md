@@ -8,7 +8,7 @@ source ~/venv/bin/activate
 git clone https://github.com/gmeda-dev/Application-reservations-test.git
 
 ## Install requirements
-pip -r requirements.txt
+pip install -r requirements.txt
 
 ## Run migrations
 ./manage.py migrate
